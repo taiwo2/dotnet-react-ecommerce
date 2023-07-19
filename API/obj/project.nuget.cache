@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4tQO+tVnrrOXoXhnjK9Zt+GHD5ttpWs8l7bWqyyujvxeJ8qqEJhduISmpGoaIsPvJrC/iDhh+WPOIKuX3BvaKQ==",
+  "dgSpecHash": "O8rwVNuysVwAflWGyBCKiPgytjX1zKt+Of5oPpDdLrzkRbcdzT8KAQhRQQgx1sPSMvMG+wI3qsbfQozjr/ps4Q==",
   "success": true,
   "projectFilePath": "/home/taiwo/dot/Ecommerce/API/API.csproj",
   "expectedPackageFiles": [
@@ -10,7 +10,10 @@
     "/home/taiwo/.nuget/packages/swashbuckle.aspnetcore/6.5.0/swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
     "/home/taiwo/.nuget/packages/swashbuckle.aspnetcore.swagger/6.5.0/swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "/home/taiwo/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.5.0/swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
-    "/home/taiwo/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.5.0/swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+    "/home/taiwo/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.5.0/swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
+    "/home/taiwo/.nuget/packages/microsoft.netcore.app.ref/7.0.9/microsoft.netcore.app.ref.7.0.9.nupkg.sha512",
+    "/home/taiwo/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.9/microsoft.aspnetcore.app.ref.7.0.9.nupkg.sha512",
+    "/home/taiwo/.nuget/packages/microsoft.netcore.app.host.linux-x64/7.0.9/microsoft.netcore.app.host.linux-x64.7.0.9.nupkg.sha512"
   ],
   "logs": []
 }
