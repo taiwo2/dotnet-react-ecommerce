@@ -31,7 +31,18 @@ app.MapControllers();
 var scope = app.Services.CreateScope();
 
 var context = scope.ServiceProvider.GetRequiredService<StoreContext>();
-var  = scope.serviceProvider.GetRequiredService<Ilogger<Program>>()
+var logger  = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
+
+try
+{
+    context.Database.Migrate();
+    DbInitializer.Initialize(context);
+}
+catch (Exception er)
+{
+    
+    logger.LogError(er, "something went wrong");
+}
 
 
 app.Run();
