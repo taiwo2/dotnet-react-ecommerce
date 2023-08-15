@@ -1729,11 +1729,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/taiwo/dot/Ecommerce/API/API.csproj",
+      "projectUniqueName": "/home/taiwo/rails/dotnet-react-ecommerce/API/API.csproj",
       "projectName": "API",
-      "projectPath": "/home/taiwo/dot/Ecommerce/API/API.csproj",
+      "projectPath": "/home/taiwo/rails/dotnet-react-ecommerce/API/API.csproj",
       "packagesPath": "/home/taiwo/.nuget/packages/",
-      "outputPath": "/home/taiwo/dot/Ecommerce/API/obj/",
+      "outputPath": "/home/taiwo/rails/dotnet-react-ecommerce/API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/taiwo/.nuget/NuGet/NuGet.Config"

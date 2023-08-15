@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "e8WcqhDi6+jUaSTrahp1t371O5kyJ+GhRxN6qi6j2ZLt+wM3Mz1KunnvWPmVbtS1FCSynQV4W5Kr+KYtjB7IyQ==",
+  "dgSpecHash": "GD9ZEGLMwOg1pUIquHZjNNfl14R8JU/jWJDpcdt/5aeEYc8CmlOQQHmYY+bTkuYO+Mpyvzdw4p5/TI4Z4kAhoQ==",
   "success": true,
-  "projectFilePath": "/home/taiwo/dot/Ecommerce/API/API.csproj",
+  "projectFilePath": "/home/taiwo/rails/dotnet-react-ecommerce/API/API.csproj",
   "expectedPackageFiles": [
     "/home/taiwo/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/home/taiwo/.nuget/packages/microsoft.aspnetcore.openapi/7.0.8/microsoft.aspnetcore.openapi.7.0.8.nupkg.sha512",
