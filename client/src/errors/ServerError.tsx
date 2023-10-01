@@ -1,3 +1,4 @@
+import React from "react";
 import { Container, Divider, Paper, Typography } from "@mui/material";
 import { useLocation } from "react-router-dom";
 
@@ -6,7 +7,7 @@ const ServerError = () => {
 
     return (
         <Container component={Paper}>
-            {state?.error ? (
+            {state.error ? (
                 <>
                     <Typography gutterBottom variant="h3" color='secondary'>
                             {state.error.title}

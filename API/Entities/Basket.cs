@@ -32,3 +32,6 @@ namespace API.Entities
         }
     }
 }
+
+// data base migrate 
+// dotnet ef migrations add BasketEntityAdded

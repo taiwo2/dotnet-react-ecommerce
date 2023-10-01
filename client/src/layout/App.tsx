@@ -1,9 +1,12 @@
 import { Container, createTheme, CssBaseline, ThemeProvider } from "@mui/material";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
+// import { getCookie } from "../util/util";
+import { getCookie } from "../app/utils/utils";
 import { ToastContainer } from "react-toastify";
 import Header from "./Header";
 import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);

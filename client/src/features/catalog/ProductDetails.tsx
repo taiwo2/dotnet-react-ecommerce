@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Divider,
   Grid,
@@ -10,7 +11,7 @@ import {
 } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { Product } from "../../models/product";
+import { Product } from "../../app/models/product";
 import agent from "../../api/agent";
 import NotFound from "../../errors/NotFound";
 import LoadingComponent from "../../layout/LoadingComponent";
