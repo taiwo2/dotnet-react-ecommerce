@@ -8,7 +8,7 @@ axios.defaults.baseURL = 'http://localhost:5137/api/';
 
 const responseBody = (response: AxiosResponse) => response.data;
 
-// axios.defaults.withCredentials = true;
+axios.defaults.withCredentials = true;
 
 axios.interceptors.response.use(async response => {
     await sleep();
