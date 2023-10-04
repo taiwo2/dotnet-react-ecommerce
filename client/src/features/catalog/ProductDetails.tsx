@@ -7,6 +7,7 @@ import {
   TableCell,
   TableContainer,
   TableRow,
+  TextField,
   Typography,
 } from "@mui/material";
 import { useEffect, useState } from "react";
@@ -15,6 +16,7 @@ import { Product } from "../../app/models/product";
 import agent from "../../api/agent";
 import NotFound from "../../errors/NotFound";
 import LoadingComponent from "../../layout/LoadingComponent";
+import { LoadingButton } from "@mui/lab";
 
 const ProductDetails = () => {
   const { id } = useParams<{ id: string }>();
@@ -74,6 +76,25 @@ const ProductDetails = () => {
             </TableBody>
           </Table>
         </TableContainer>
+        <Grid container spacing={2}>
+          <Grid item xs={6}>
+            <TextField
+              variant={'outlined'}
+              type={'number'}
+              label={'Quantity in Cart'}
+              fullWidth
+            />
+          </Grid>
+          <Grid item xs={6}>
+            <LoadingButton 
+              sx={{ height: '55px' }}
+              color={'primary'}
+              size={'large'}
+              variant={'contained'}
+              fullWidth>
+            </LoadingButton>
+          </Grid>
+        </Grid>
       </Grid>
     </Grid>
   );
