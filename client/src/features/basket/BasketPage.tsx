@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Button, Grid, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import BasketTable from "./BasketTable";
-import { useStoreContext } from "../../app/context/StoreContext";
+import { useAppSelector } from "../../app/store/configureStore";
+import BasketSummary from "./BasketSummary";
 
 const BasketPage = () => {
-  const {basket}= useStoreContext()
+  const { basket } = useAppSelector(state => state.basket);
  ;
   if (!basket)
     return <Typography variant="h3">Your basket is empty</Typography>;  
@@ -17,7 +18,7 @@ const BasketPage = () => {
       <Grid container>
         <Grid item xs={6} />
         <Grid item xs={6}>
-          {/* <BasketSummary /> */}
+          <BasketSummary />
           <Button
             component={Link}
             to="/checkout"

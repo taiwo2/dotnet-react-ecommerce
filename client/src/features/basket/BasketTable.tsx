@@ -1,15 +1,18 @@
 import React from "react";
 import { Remove, Add, Delete } from "@mui/icons-material";
-// import { LoadingButton } from "@mui/lab";
 import { TableContainer, Paper, Table, TableHead, TableRow, TableCell, TableBody, Box } from "@mui/material";
 import { BasketItem } from "../../app/models/basket";
+import { LoadingButton } from "@mui/lab";
+import { useAppDispatch, useAppSelector } from "../../app/store/configureStore";
+import { addBasketItemAsync, removeBasketItemAsync } from "./BasketSlice";
 interface Props {
   items: BasketItem[];
   isBasket?: boolean;
 }
 
-export default function BasketTable({ items, isBasket = true }: Props) {
-   
+const BasketTable = ({ items, isBasket = true }: Props) =>{
+    const { status } = useAppSelector(state => state.basket);
+    const dispatch = useAppDispatch();
     return (
         <TableContainer component={Paper}>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -38,7 +41,7 @@ export default function BasketTable({ items, isBasket = true }: Props) {
                             <TableCell align="right">${(item.price / 100).toFixed(2)}</TableCell>
                             <TableCell align="center">
                             <Remove />
-                                {/* {isBasket &&
+                                {isBasket &&
                                     <LoadingButton
                                         loading={status === 'pendingRemoveItem' + item.productId + 'rem'}
                                         onClick={() => dispatch(removeBasketItemAsync({
@@ -46,18 +49,18 @@ export default function BasketTable({ items, isBasket = true }: Props) {
                                         }))}
                                         color='error'>
                                         <Remove />
-                                    </LoadingButton>} */}
-                                {/* {item.quantity} */}
-                                {/* {isBasket &&
+                                    </LoadingButton>} 
+                                 {item.quantity} 
+                                {isBasket &&
                                     <LoadingButton
                                         loading={status === 'pendingAddItem' + item.productId}
                                         onClick={() => dispatch(addBasketItemAsync({ productId: item.productId }))}
                                         color='secondary'>
                                         <Add />
-                                    </LoadingButton>} */}
+                                    </LoadingButton>}
                             </TableCell>
                             <TableCell align="right">${((item.price / 100) * item.quantity).toFixed(2)}</TableCell>
-                            {/* {isBasket &&
+                            {isBasket &&
                                 <TableCell align="right">
                                     <LoadingButton
                                         loading={status === 'pendingRemoveItem' + item.productId + 'del'}
@@ -67,7 +70,7 @@ export default function BasketTable({ items, isBasket = true }: Props) {
                                         color='error'>
                                         <Delete />
                                     </LoadingButton>
-                                </TableCell>} */}
+                                </TableCell>}
                         </TableRow>
                     ))}
                 </TableBody>
@@ -75,3 +78,5 @@ export default function BasketTable({ items, isBasket = true }: Props) {
         </TableContainer>
     )
 }
+
+export default BasketTable;

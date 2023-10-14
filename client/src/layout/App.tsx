@@ -5,12 +5,13 @@ import { getCookie } from "../app/utils/utils";
 import { ToastContainer } from "react-toastify";
 import Header from "./Header";
 import 'react-toastify/dist/ReactToastify.css';
-import { useStoreContext } from "../app/context/StoreContext";
+import { setBasket } from "../features/basket/BasketSlice";
 import agent from "../api/agent";
 import LoadingComponent from "./LoadingComponent";
+import { useAppDispatch } from "../app/store/configureStore";
 
 function App() {
-  const {setBasket} =useStoreContext();
+  const dispatch = useAppDispatch();
   const [loading, setLoading] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
   const palleteType = darkMode ? 'dark' : 'light';
@@ -19,13 +20,13 @@ function App() {
    const buyerId = getCookie('buyerId')
     if (buyerId){
       agent.Basket.get()
-      .then(basket => setBasket(basket))
+      .then(basket => dispatch(setBasket(basket)))
       .catch(error => console.log(error))
       .finally(() => setLoading(false))
     }else {
       setLoading(false)
     }
-  }, [setBasket])
+  }, [dispatch])
   const theme = createTheme({
     palette: {
       mode: palleteType,

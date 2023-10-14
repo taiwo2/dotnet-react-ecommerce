@@ -12,22 +12,17 @@ import {
 import { Product } from "../../app/models/product";
 import { Link } from "react-router-dom";
 import { LoadingButton } from "@mui/lab";
-import agent from "../../api/agent";
-import { error } from "console";
 
+import { useAppDispatch } from "../../app/store/configureStore";
+import { addBasketItemAsync, setBasket } from "../basket/BasketSlice";
 interface Props {
   product: Product;
 }
 
 const ProductCard = ({ product }: Props) => {
   const [loading,setLoading] = useState(false);
+  const dispatch = useAppDispatch();
 
-  const handleAddItem = (productId: number) => {
-    setLoading(true)
-    agent.Basket.addItem(productId)
-      .then(error => console.log(error))
-      .finally(() => setLoading(false))
-  };
   return (
     <Card>
       <CardHeader
@@ -59,7 +54,9 @@ const ProductCard = ({ product }: Props) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <LoadingButton  loading={loading} onClick={()=> handleAddItem(product.id)} size="small">Add to cart</LoadingButton>
+        <LoadingButton  loading={loading}
+          onClick={() => dispatch(addBasketItemAsync({productId: product.id}))} 
+         size="small">Add to cart</LoadingButton>
         <Button component={Link} to={`/catalog/${product.id}`} size="small">
           View
         </Button>

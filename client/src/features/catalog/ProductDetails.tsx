@@ -17,11 +17,14 @@ import agent from "../../api/agent";
 import NotFound from "../../errors/NotFound";
 import LoadingComponent from "../../layout/LoadingComponent";
 import { LoadingButton } from "@mui/lab";
+import { useAppDispatch, useAppSelector } from "../../app/store/configureStore";
 
 const ProductDetails = () => {
   const { id } = useParams<{ id: string }>();
   const [product, setProduct] = useState<Product | null>(null);
   const [loading, setLoading] = useState(true);
+  const { basket, status } = useAppSelector(state => state.basket);
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     id && agent.Catalog.details(parseInt(id))
