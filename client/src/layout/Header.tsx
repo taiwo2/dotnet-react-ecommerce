@@ -14,17 +14,18 @@ import {
 import { ShoppingCart } from "@mui/icons-material";
 
 import { Link, NavLink } from "react-router-dom";
-import { useStoreContext } from "../app/context/StoreContext";
+import { useAppSelector } from "../app/store/configureStore";
 
 interface Props {
   darkMode: boolean;
   handleThemeChange: () => void;
 }
 
-export default function Header({ darkMode, handleThemeChange }: Props) {
-  const { basket } = useStoreContext();
-  console.log(basket);
-  // var itemCount = basket?.items.reduce((sum,item) => sum + item.quantity,0);
+const Header = ({ darkMode, handleThemeChange }: Props) => {
+  const { basket } = useAppSelector(state => state.basket);
+    const itemCount = basket&&basket.items.reduce((sum, item) => sum + item.quantity, 0);
+
+  
   const midLinks = [
     { title: "catalog", path: "/catalog" },
     { title: "about", path: "/about" },
@@ -77,7 +78,7 @@ export default function Header({ darkMode, handleThemeChange }: Props) {
             size="large"
             sx={{ color: "inherit" }}
           >
-            <Badge badgeContent={4} color="secondary">
+            <Badge badgeContent={itemCount} color="secondary">
               <ShoppingCart />
             </Badge>
           </IconButton>
@@ -93,3 +94,5 @@ export default function Header({ darkMode, handleThemeChange }: Props) {
     </AppBar>
   );
 }
+
+export default Header;

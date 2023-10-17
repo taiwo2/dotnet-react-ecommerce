@@ -40,7 +40,6 @@ const BasketTable = ({ items, isBasket = true }: Props) =>{
                             </TableCell>
                             <TableCell align="right">${(item.price / 100).toFixed(2)}</TableCell>
                             <TableCell align="center">
-                            <Remove />
                                 {isBasket &&
                                     <LoadingButton
                                         loading={status === 'pendingRemoveItem' + item.productId + 'rem'}

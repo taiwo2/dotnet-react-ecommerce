@@ -7,7 +7,7 @@ import BasketSummary from "./BasketSummary";
 
 const BasketPage = () => {
   const { basket } = useAppSelector(state => state.basket);
- ;
+//  console.log(basket)
   if (!basket)
     return <Typography variant="h3">Your basket is empty</Typography>;  
   return (

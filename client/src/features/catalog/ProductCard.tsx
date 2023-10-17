@@ -13,14 +13,14 @@ import { Product } from "../../app/models/product";
 import { Link } from "react-router-dom";
 import { LoadingButton } from "@mui/lab";
 
-import { useAppDispatch } from "../../app/store/configureStore";
+import { useAppDispatch, useAppSelector } from "../../app/store/configureStore";
 import { addBasketItemAsync, setBasket } from "../basket/BasketSlice";
 interface Props {
   product: Product;
 }
 
 const ProductCard = ({ product }: Props) => {
-  const [loading,setLoading] = useState(false);
+  const {status} = useAppSelector(state => state.basket);
   const dispatch = useAppDispatch();
 
   return (
@@ -54,8 +54,9 @@ const ProductCard = ({ product }: Props) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <LoadingButton  loading={loading}
-          onClick={() => dispatch(addBasketItemAsync({productId: product.id}))} 
+        <LoadingButton  
+        loading={status === 'pendingAddItem' + product.id} 
+        onClick={() => dispatch(addBasketItemAsync({productId: product.id}))} 
          size="small">Add to cart</LoadingButton>
         <Button component={Link} to={`/catalog/${product.id}`} size="small">
           View
