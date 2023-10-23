@@ -71,12 +71,13 @@ export const basketSlice = createSlice({
             state.status = 'pendingRemoveItem' + action.meta.arg.productId + action.meta.arg.name;
         })
         builder.addCase(removeBasketItemAsync.fulfilled, (state, action) => {
-            // const { productId, quantity } = action.meta.arg;
-            // const itemIndex = state.basket?.items.findIndex(i => i.productId === productId);
-            // if (itemIndex === -1 || itemIndex === undefined) return; 
-            // state.basket!.items[itemIndex].quantity -= quantity;
-            // if (state.basket?.items[itemIndex].quantity === 0) 
-            //     state.basket.items.splice(itemIndex, 1);
+            const { productId, quantity } = action.meta.arg;
+            const itemIndex = state.basket && state.basket.items.findIndex(i => i.productId === productId);
+            console.log(itemIndex);
+            if (itemIndex === -1 || itemIndex === null) return; 
+            state.basket!.items[itemIndex].quantity -= quantity;
+            if (state.basket && state.basket.items[itemIndex].quantity === 0) 
+                state.basket.items.splice(itemIndex, 1);
             state.status = 'idle';
         });
         builder.addCase(removeBasketItemAsync.rejected, (state, action) => {
