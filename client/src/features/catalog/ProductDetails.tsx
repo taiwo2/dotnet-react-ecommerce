@@ -30,8 +30,8 @@ const ProductDetails = () => {
   const dispatch = useAppDispatch();
   
   if (product === undefined) return;
-  const productID = product.id
-  const item = basket && basket!.items.find(i => i.productId === productID);
+  // const productID = product.id
+  const item = basket && basket!.items.find(i => i.productId === product.id);
 
   
 
