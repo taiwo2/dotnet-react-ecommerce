@@ -22,17 +22,18 @@ import { fetchProductAsync, productSelectors } from "./catalogSlice";
 const ProductDetails = () => {
   const { id } = useParams<{ id: string }>();
   const product = useAppSelector(state => productSelectors.selectById(state,id!))
-
-  const [loading, setLoading] = useState(true);
   const [quantity, setQuantity] = useState(0);
   const { basket, status } = useAppSelector(state => state.basket);
   const {status: productStatus} = useAppSelector(state => state.catalog)
   const dispatch = useAppDispatch();
+  // console.log(product)
   
-  if (product === undefined) return;
-  // const productID = product.id
-  const item = basket && basket!.items.find(i => i.productId === product.id);
-
+  var itemDetails = () => {
+    if (product === undefined) return;
+    const productID = product.id
+   return  basket && basket!.items.find(i => i.productId  === productID)
+  }
+  const item = itemDetails();
   
 
   useEffect(() => {
@@ -41,7 +42,6 @@ const ProductDetails = () => {
 
   }, [id,item,product,dispatch]);
 
- 
 
   const handleInputChange = (e: any) =>{
     if (e.target.value >= 0)
@@ -50,10 +50,10 @@ const ProductDetails = () => {
   const handleUpdateCart = ()=> {
     if (!item || quantity > (item && item.quantity)) {
         const updatedQuantity = item ? quantity - item.quantity : quantity;
-        dispatch(addBasketItemAsync({productId: product.id!, quantity: updatedQuantity}))
+        dispatch(addBasketItemAsync({productId: product!.id, quantity: updatedQuantity}))
     } else {
         const updatedQuantity = item.quantity - quantity;
-        dispatch(removeBasketItemAsync({productId: product.id!, quantity: updatedQuantity}))
+        dispatch(removeBasketItemAsync({productId: product!.id, quantity: updatedQuantity}))
     }
   }
   if (productStatus.includes('pending')) return  <LoadingComponent message="Loading product..." />

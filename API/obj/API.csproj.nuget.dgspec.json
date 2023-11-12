@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/home/taiwo/dot/Ecommerce/API/API.csproj": {}
+    "/Users/user/Taiwo/dotnet-react-ecommerce/API/API.csproj": {}
   },
   "projects": {
-    "/home/taiwo/dot/Ecommerce/API/API.csproj": {
+    "/Users/user/Taiwo/dotnet-react-ecommerce/API/API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/taiwo/dot/Ecommerce/API/API.csproj",
+        "projectUniqueName": "/Users/user/Taiwo/dotnet-react-ecommerce/API/API.csproj",
         "projectName": "API",
-        "projectPath": "/home/taiwo/dot/Ecommerce/API/API.csproj",
-        "packagesPath": "/home/taiwo/.nuget/packages/",
-        "outputPath": "/home/taiwo/dot/Ecommerce/API/obj/",
+        "projectPath": "/Users/user/Taiwo/dotnet-react-ecommerce/API/API.csproj",
+        "packagesPath": "/Users/user/.nuget/packages/",
+        "outputPath": "/Users/user/Taiwo/dotnet-react-ecommerce/API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/taiwo/.nuget/NuGet/NuGet.Config"
+          "/Users/user/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "/usr/local/share/dotnet/sdk/7.0.310/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -80,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.402/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.310/RuntimeIdentifierGraph.json"
         }
       }
     }
