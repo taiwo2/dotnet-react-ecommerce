@@ -8,6 +8,7 @@ import { Grid, Paper } from "@mui/material";
 import RadioButtonGroup from "../../app/components/RadioButtonGroup";
 import CheckboxButtons from "../../app/components/CheckboxButtons";
 import AppPagination from "../../app/components/AppPaginations";
+import ProductSearch from "./ProductSearch";
 
 const sortOptions = [
   { value: 'name', label: 'Alphabetical' },
@@ -37,7 +38,7 @@ const Catalog = () => {
     <Grid container columnSpacing={4}>
             <Grid item xs={3}>
                 <Paper sx={{ mb: 2 }}>
-                    {/* <ProductSearch /> */}
+                    <ProductSearch />
                 </Paper>
                 <Paper sx={{ p: 2, mb: 2 }}>
                     <RadioButtonGroup
