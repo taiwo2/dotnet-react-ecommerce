@@ -67,7 +67,11 @@ const TestErrors = {
     get500Error: () => requests.get('buggy/server-error'),
     getValidationError: () => requests.get('buggy/validation-error')
 }
-
+const Account = {
+    login: (values: any) => requests.post('account/login', values),
+    register: (values: any) => requests.post('account/register', values),
+    currentUser: () => requests.get('account/currentUser')
+}
 const Basket = {
     get: () => requests.get('basket'),
     addItem: (productId: number, quantity = 1) => requests.post(`basket?productId=${productId}&quantity=${quantity}`, {}),
@@ -76,7 +80,8 @@ const Basket = {
 const agent = {
     Catalog,
     TestErrors,
-    Basket
+    Basket,
+    Account
 }
 
 export default agent;
