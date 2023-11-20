@@ -15,7 +15,7 @@ import { ShoppingCart } from "@mui/icons-material";
 
 import { Link, NavLink } from "react-router-dom";
 import { useAppSelector } from "../app/store/configureStore";
-import SignedInMenu from "./SigninMenu";
+import SignedInMenu from "./SignInedMenu";
 
 interface Props {
   darkMode: boolean;

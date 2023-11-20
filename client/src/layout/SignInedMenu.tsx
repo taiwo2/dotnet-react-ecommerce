@@ -1,5 +1,5 @@
 import { Button, Menu, Fade, MenuItem } from "@mui/material";
-import { useState } from "react";
+import React,{ useState } from "react";
 import { signOut } from "../features/account/accountSlice";
 import { clearBasket } from "../features/basket/BasketSlice";
 import { useAppSelector,useAppDispatch } from "../app/store/configureStore";
@@ -25,7 +25,7 @@ export default function SignedInMenu() {
         onClick={handleClick}
         sx={{ typography: 'h6' }}
       >
-        {user?.email}
+        {user!.email}
       </Button>
       <Menu
         anchorEl={anchorEl}

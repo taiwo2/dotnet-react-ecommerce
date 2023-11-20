@@ -1,14 +1,15 @@
 import { Container, createTheme, CssBaseline, ThemeProvider } from "@mui/material";
-import React, { useState,useEffect } from "react";
+import React, { useState,useEffect, useCallback } from "react";
 import { Outlet } from "react-router-dom";
 import { getCookie } from "../app/utils/utils";
 import { ToastContainer } from "react-toastify";
 import Header from "./Header";
 import 'react-toastify/dist/ReactToastify.css';
-import { setBasket } from "../features/basket/BasketSlice";
+import { fetchBasketAsync, setBasket } from "../features/basket/BasketSlice";
 import agent from "../api/agent";
 import LoadingComponent from "./LoadingComponent";
 import { useAppDispatch } from "../app/store/configureStore";
+import { fetchCurrentUser } from "../features/account/accountSlice";
 
 function App() {
   const dispatch = useAppDispatch();
@@ -16,17 +17,34 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
   const palleteType = darkMode ? 'dark' : 'light';
 
-  useEffect(() => {
-   const buyerId = getCookie('buyerId')
-    if (buyerId){
-      agent.Basket.get()
-      .then(basket => dispatch(setBasket(basket)))
-      .catch(error => console.log(error))
-      .finally(() => setLoading(false))
-    }else {
-      setLoading(false)
+
+  const initApp = useCallback(async () => {
+    try {
+        await dispatch(fetchCurrentUser());
+        await dispatch(fetchBasketAsync());
+      
+    } catch (error) {
+      console.log(error);
     }
-  }, [dispatch])
+  },[dispatch]);
+
+  // useEffect(() => {
+  //   const buyerId = getCookie('buyerId');
+  //   dispatch(fetchCurrentUser)
+  //   if (buyerId) {
+  //     agent.Basket.get()
+  //       .then(basket => dispatch(setBasket(basket)))
+  //       .catch(error => console.log(error))
+  //       .finally(() => setLoading(false));
+  //   } else {
+  //     setLoading(false);
+  //   }
+  // }, [dispatch]);
+
+  useEffect(()  => {
+   initApp().then(() => setLoading(false));
+  }, [initApp])
+
   const theme = createTheme({
     palette: {
       mode: palleteType,

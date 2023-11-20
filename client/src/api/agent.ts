@@ -2,6 +2,7 @@ import axios, { AxiosError, AxiosResponse } from "axios";
 import { toast } from "react-toastify";
 import { router } from "../router/Routes";
 import { PaginatedResponse } from "../app/models/pagination";
+import { store } from "../app/store/configureStore";
 
 const sleep = () => new Promise(resolve => setTimeout(resolve, 500))
 
@@ -9,7 +10,27 @@ axios.defaults.baseURL = 'http://localhost:5137/api/';
 
 const responseBody = (response: AxiosResponse) => response.data;
 
+
 axios.defaults.withCredentials = true;
+
+axios.interceptors.request.use(config => {
+    const token = store.getState().account.user && store.getState().account.user!.token;
+    if (token !== null && token !== undefined) {
+        config.headers.Authorization = `Bearer ${token}`
+    };
+    return config;
+})
+// axios.interceptors.request.use(config => {
+//     // const token = store && store.getState().account.user;
+//     const token= JSON.parse(localStorage.getItem("user") || "").token
+//     if (localStorage.getItem("user")){
+//         config.headers.Authorization = `Bearer ${token}`;
+//     }
+   
+//     console.log({token},'atiwo')
+    
+//     return config;
+// });
 
 axios.interceptors.response.use(async response => {
     await sleep();
@@ -35,7 +56,7 @@ axios.interceptors.response.use(async response => {
             toast.error(data.title);
             break;
         case 401:
-            toast.error(data.title);
+            toast.error(data.title || "Unauthorized");
             break;
         case 500:
             router.navigate('/server-error', {state: {error: data}});
@@ -46,6 +67,7 @@ axios.interceptors.response.use(async response => {
 
     return Promise.reject(error.response);
 })
+
 
 const requests = {
     get: (url: string,params?:URLSearchParams) => axios.get(url,{params}).then(responseBody),
@@ -83,5 +105,7 @@ const agent = {
     Basket,
     Account
 }
+
+
 
 export default agent;

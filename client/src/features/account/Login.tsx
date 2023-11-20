@@ -14,11 +14,10 @@ const  Login =() =>{
     const {register, handleSubmit, formState: {isSubmitting, errors, isValid}} = useForm({
         mode: 'onTouched'
     });  
-
     const submitForm = async(data: FieldValues) =>{
         try {
             await dispatch(signInUser(data));
-            // navigate(location.state?.from || '/catalog');
+            navigate(location.state.from || '/catalog');
         } catch (error) {
             console.log(error);
         }
@@ -43,8 +42,8 @@ const  Login =() =>{
                     label="Username"
                     autoFocus
                     {...register('username', {required: 'Username is required'})}
-                    // error={!!errors.username}
-                    // helperText={errors?.username?.message as string}
+                    error={!!errors.username}
+                    // helperText={errors.username?.message as unknown as string}
                 />
                 <TextField
                     margin="normal"
@@ -53,7 +52,7 @@ const  Login =() =>{
                     label="Password"
                     type="password"
                     {...register('password', {required: 'Password is required'})}
-                    // error={!!errors.password}
+                    error={!!errors.password}
                     // helperText={errors?.password?.message as string}
                 />
                 <LoadingButton 
