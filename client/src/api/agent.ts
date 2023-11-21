@@ -12,7 +12,11 @@ const responseBody = (response: AxiosResponse) => response.data;
 
 
 axios.defaults.withCredentials = true;
-
+// axios.interceptors.request.use(config => {
+//     const token = store.getState().account.user!.token;
+//     if (token) config.headers.Authorization = `Bearer ${token}`;
+//     return config;
+// })
 axios.interceptors.request.use(config => {
     const token = store.getState().account.user && store.getState().account.user!.token;
     if (token !== null && token !== undefined) {
@@ -26,7 +30,7 @@ axios.interceptors.request.use(config => {
 //     if (localStorage.getItem("user")){
 //         config.headers.Authorization = `Bearer ${token}`;
 //     }
-   
+
 //     console.log({token},'atiwo')
     
 //     return config;

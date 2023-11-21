@@ -22,7 +22,11 @@ const  Login =() =>{
             console.log(error);
         }
     }
-
+     const usernamefiel = () => {
+        if(errors.username !== undefined){
+            errors.username.message as unknown as string
+        }
+     }
     return (
         <Container component={Paper} maxWidth='sm' sx={{ p: 4, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
@@ -43,6 +47,11 @@ const  Login =() =>{
                     autoFocus
                     {...register('username', {required: 'Username is required'})}
                     error={!!errors.username}
+                    helperText={
+                        (errors.username !== undefined) &&
+                            errors.username.message as unknown as string
+                        
+                    }
                     // helperText={errors.username?.message as unknown as string}
                 />
                 <TextField
@@ -53,6 +62,7 @@ const  Login =() =>{
                     type="password"
                     {...register('password', {required: 'Password is required'})}
                     error={!!errors.password}
+                    helperText={!usernamefiel}
                     // helperText={errors?.password?.message as string}
                 />
                 <LoadingButton 
