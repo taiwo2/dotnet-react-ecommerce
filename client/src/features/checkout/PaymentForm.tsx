@@ -1,9 +1,16 @@
 import React from "react";
 import { Typography, Grid, TextField, FormControlLabel, Checkbox } from "@mui/material";
 import { useFormContext } from "react-hook-form";
+import { CardCvcElement, CardExpiryElement, CardNumberElement } from "@stripe/react-stripe-js";
+import { StripeElementType } from "@stripe/stripe-js";
 import AppTextInput from "../../app/components/AppTextInput";
+import { StripeInput } from "./StripeInput";
 
-const PaymentForm = () =>{
+interface Props {
+  cardState: {elementError: {[key in StripeElementType]?: string}},
+  onCardInputChange: (event: any) => void;
+}
+const PaymentForm = ({cardState, onCardInputChange}: Props) =>{
   const { control } = useFormContext();
   return (
     <>
@@ -20,33 +27,54 @@ const PaymentForm = () =>{
         </Grid>
         <Grid item xs={12} md={6}>
           <TextField
-            // required
+            onChange={onCardInputChange}
+            error={!!cardState.elementError.cardNumber}
+            helperText={cardState.elementError.cardNumber}
             id="cardNumber"
             label="Card number"
             fullWidth
             autoComplete="cc-number"
-            variant="standard"
+            variant="outlined"
+            InputLabelProps={{ shrink: true }}
+            InputProps={{
+              inputComponent: StripeInput,
+              inputProps: {
+                component: CardNumberElement
+              }
+            }}
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <TextField
-            // required
             id="expDate"
             label="Expiry date"
             fullWidth
             autoComplete="cc-exp"
-            variant="standard"
+            variant="outlined"
+            InputLabelProps={{ shrink: true }}
+            InputProps={{
+              inputComponent: StripeInput,
+              inputProps: {
+                component: CardExpiryElement
+              }
+            }}
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <TextField
-            // required
             id="cvv"
             label="CVV"
             helperText="Last three digits on signature strip"
             fullWidth
             autoComplete="cc-csc"
-            variant="standard"
+            variant="outlined"
+            InputLabelProps={{ shrink: true }}
+            InputProps={{
+              inputComponent: StripeInput,
+              inputProps: {
+                component: CardCvcElement
+              }
+            }}
           />
         </Grid>
         <Grid item xs={12}>
