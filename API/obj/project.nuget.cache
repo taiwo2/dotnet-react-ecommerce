@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uEhJ/H0+Sw6/FDkMd2PLoQSCaeZVKOeaXz2isaml4k415CAAkSEKugtA7WLD591Mytce3Ho4d7vC50mVklN3fQ==",
+  "dgSpecHash": "Bt4xzYSxOUPXpd+XDS26xfBU7eGxp3/Ewru+oDuxt7WkbcnAA4r9dyAMz9qBLV7n7ql+eDfEsWduUpdGRDz7Bw==",
   "success": true,
-  "projectFilePath": "/Users/user/Taiwo/dotnet-react-ecommerce/API/API.csproj",
+  "projectFilePath": "/Users/user/Taiwo/new/dotnet-react-ecommerce/API/API.csproj",
   "expectedPackageFiles": [
     "/Users/user/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/user/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/7.0.1/microsoft.aspnetcore.authentication.jwtbearer.7.0.1.nupkg.sha512",
