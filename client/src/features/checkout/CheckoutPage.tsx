@@ -84,8 +84,7 @@ export default function CheckoutPage() {
                     }
                 }
             });
-            console.log(basket!.clientSecret)
-            console.log(paymentResult,"taiwo");
+            console.log(paymentResult);
             if (paymentResult.paymentIntent!.status === 'succeeded') {
                 const orderNumber = await agent.Orders.create({ saveAddress, shippingAddress: address });
                 setOrderNumber(orderNumber);
@@ -119,16 +118,16 @@ export default function CheckoutPage() {
         setActiveStep(activeStep - 1);
     };
 
-    // function submitDisabled(): boolean {
-    //     if (activeStep === steps.length - 1) {
-    //         return !cardComplete.cardCvc
-    //             || !cardComplete.cardExpiry
-    //             || !cardComplete.cardNumber
-    //             || !methods.formState.isValid
-    //     } else {
-    //         return !methods.formState.isValid
-    //     }
-    // }
+    function submitDisabled(): boolean {
+        if (activeStep === steps.length - 1) {
+            return !cardComplete.cardCvc
+                || !cardComplete.cardExpiry
+                || !cardComplete.cardNumber
+                || !methods.formState.isValid
+        } else {
+            return !methods.formState.isValid
+        }
+    }
 
     return (
         <FormProvider {...methods}>
@@ -173,7 +172,7 @@ export default function CheckoutPage() {
                                 )}
                                 <LoadingButton
                                     loading={loading}
-                                    // disabled={submitDisabled()}
+                                    disabled={submitDisabled()}
                                     variant="contained"
                                     type='submit'
                                     sx={{ mt: 3, ml: 1 }}
