@@ -17,6 +17,9 @@ const AppTextInput = (props: Props) =>{
             {...props}
             {...field}
             fullWidth
+            multiline={props.multiline}
+            rows={props.rows}
+            type={props.type}
             variant="outlined"
             error={!!fieldState.error}
             helperText={fieldState.error && fieldState.error.message}

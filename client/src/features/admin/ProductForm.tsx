@@ -1,5 +1,5 @@
 import { Box, Paper, Typography, Grid, Button } from "@mui/material";
-import { useEffect } from "react";
+import React,{ useEffect } from "react";
 import { FieldValues, useForm } from "react-hook-form";
 import { useAppDispatch } from "../../app/store/configureStore";
 import { setProduct } from "../catalog/catalogSlice";
@@ -23,7 +23,7 @@ export default function ProductForm({ product, cancelEdit }: Props) {
         resolver: yupResolver(validationSchema)
     });
     const { brands, types } = useProducts();
-    const watchFile = watch('file', null);
+    const watchFile = watch('file')as any;
     const dispatch = useAppDispatch();
 
     useEffect(() => {
@@ -79,7 +79,7 @@ export default function ProductForm({ product, cancelEdit }: Props) {
                             {watchFile ? (
                                 <img src={watchFile.preview} alt="preview" style={{ maxHeight: 200 }} />
                             ) : (
-                                <img src={product?.pictureUrl} alt={product?.name} style={{ maxHeight: 200 }} />
+                                <img src={product&&product.pictureUrl} alt={product&&product.name} style={{ maxHeight: 200 }} />
                             )}
                         </Box>
 

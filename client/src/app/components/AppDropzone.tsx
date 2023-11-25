@@ -1,6 +1,6 @@
 import { UploadFile } from '@mui/icons-material'
 import { FormControl, Typography, FormHelperText } from '@mui/material'
-import { useCallback } from 'react'
+import React, { useCallback } from 'react'
 import { useDropzone } from 'react-dropzone'
 import { useController, UseControllerProps } from 'react-hook-form'
 
@@ -36,7 +36,8 @@ export default function AppDropzone(props: Props) {
                 <input {...getInputProps()} />
                 <UploadFile sx={{ fontSize: '100px' }} />
                 <Typography variant='h4'>Drop image here</Typography>
-                <FormHelperText>{fieldState.error?.message}</FormHelperText>
+                {/* <FormHelperText>{fieldState.error!.message}</FormHelperText> */}
+                
             </FormControl>
         </div>
     )

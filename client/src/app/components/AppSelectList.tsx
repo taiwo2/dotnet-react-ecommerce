@@ -1,3 +1,5 @@
+import React from 'react'
+
 import { FormControl, InputLabel, Select, MenuItem, FormHelperText } from "@mui/material";
 import { useController, UseControllerProps } from "react-hook-form";
 
@@ -20,7 +22,7 @@ export default function AppSelectList(props: Props) {
                     <MenuItem value={item} key={index}>{item}</MenuItem>
                 ))}
             </Select>
-            <FormHelperText>{fieldState.error?.message}</FormHelperText>
+            {/* <FormHelperText>{fieldState.error!.message}</FormHelperText> */}
         </FormControl>
     )
 }
