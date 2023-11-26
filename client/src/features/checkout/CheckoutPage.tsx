@@ -95,6 +95,7 @@ export default function CheckoutPage() {
                 setLoading(false);
             } else {
                 // setPaymentMessage(!paymentResult.error.message!);
+                setPaymentMessage("payment filed!");
                 setPaymentSucceeded(false);
                 setLoading(false);
                 setActiveStep(activeStep + 1);

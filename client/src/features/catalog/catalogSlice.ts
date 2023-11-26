@@ -31,7 +31,7 @@ export const fetchProductsAsync = createAsyncThunk<Product[], void, {state: Root
     async (_, thunkAPI) => {
         const params = getAxiosParams(thunkAPI.getState().catalog.productParams)
         try {
-            var response = await agent.Catalog.list(params);
+            const response = await agent.Catalog.list(params);
             thunkAPI.dispatch(setMetaData(response.metaData));
             return response.items;
         } catch (error: any) {
@@ -109,7 +109,7 @@ export const catalogSlice = createSlice({
         }
     },
     extraReducers: (builder => {
-        builder.addCase(fetchProductsAsync.pending, (state, action) => {
+        builder.addCase(fetchProductsAsync.pending, (state,) => {
             state.status = 'pendingFetchProducts'
         });
         builder.addCase(fetchProductsAsync.fulfilled, (state, action) => {

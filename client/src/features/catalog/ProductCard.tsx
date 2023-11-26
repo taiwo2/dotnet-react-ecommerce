@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 import { LoadingButton } from "@mui/lab";
 
 import { useAppDispatch, useAppSelector } from "../../app/store/configureStore";
-import { addBasketItemAsync, setBasket } from "../basket/BasketSlice";
+import { addBasketItemAsync} from "../basket/BasketSlice";
 interface Props {
   product: Product;
 }
@@ -40,7 +40,7 @@ const ProductCard = ({ product }: Props) => {
         sx={{
           height: 140,
           backgroundSize: "contain",
-          bgcolor: "primary.light",
+          // bgcolor: "primary.light",
         }}
         image={product.pictureUrl}
         title={product.name}

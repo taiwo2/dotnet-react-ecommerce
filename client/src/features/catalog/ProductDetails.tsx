@@ -28,7 +28,7 @@ const ProductDetails = () => {
   const dispatch = useAppDispatch();
   // console.log(product)
   
-  var itemDetails = () => {
+  const itemDetails = () => {
     if (product === undefined) return;
     const productID = product.id
    return  basket && basket!.items.find(i => i.productId  === productID)

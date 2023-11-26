@@ -12,7 +12,6 @@ import BasketPage from "../features/basket/BasketPage";
 import Register from "../features/account/Register";
 import Login from "../features/account/Login";
 import RequireAuth from "./RequiredAuth";
-import CheckoutPage from "../features/checkout/CheckoutPage";
 import Orders from "../features/Order/Orders";
 import CheckoutWrapper from "../features/checkout/CheckoutWrapper";
 import Inventory from "../features/admin/Inventory";

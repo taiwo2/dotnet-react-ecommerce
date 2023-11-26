@@ -11,7 +11,7 @@ const Register = () =>{
     const navigate = useNavigate();
     const [validationErrors, setValidationErrors] = useState<string[]>([]);
 
-    const { register, handleSubmit, setError, formState: { isSubmitting, errors, isValid } } = useForm({
+    const { register, handleSubmit, formState: { isSubmitting, errors, isValid } } = useForm({
         mode: 'onTouched'
     });
 

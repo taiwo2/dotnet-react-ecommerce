@@ -1,12 +1,10 @@
 import { Container, createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 import React, { useState,useEffect, useCallback } from "react";
-import { getCookie } from "../app/utils/utils";
 import { ToastContainer } from "react-toastify";
 import { Outlet, useLocation } from "react-router-dom";
 import Header from "./Header";
 import 'react-toastify/dist/ReactToastify.css';
-import { fetchBasketAsync, setBasket } from "../features/basket/BasketSlice";
-import agent from "../api/agent";
+import { fetchBasketAsync } from "../features/basket/BasketSlice";
 import LoadingComponent from "./LoadingComponent";
 import { useAppDispatch } from "../app/store/configureStore";
 import { fetchCurrentUser } from "../features/account/accountSlice";
