@@ -3,7 +3,7 @@
   <p>A FUll-Stack react-redux single page responsive application, where a user can buy a product, add to cart, update carts,search, order for products with  Stripe payment foe shipment. A user needs to sign up and login to the App</p>
 
 
-<img class=mobile-image src="./images/home.png" width="200" /> | <img class=mobile-image src="./images/api.png" width="325" />
+<img class=mobile-image src="./images/home.png" width="50%" />  <img class=mobile-image src="./images/api.png" width="50%" />
 
 
 <!-- TABLE OF CONTENTS -->
