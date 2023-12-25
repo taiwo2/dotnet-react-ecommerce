@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BojPcdZnkvQ0S+DZIMY8wiJfASb4WjDskLLB+dWeq/fcU5BVJgaVwL+A/4BeVMaMYE5LLfnil+efqA89oDGXKw==",
+  "dgSpecHash": "lXAmg0mHHwE/LgHMkjkF1BAFyFf9q0p+296Qfi8tdPw95CFiiCLxzzFdh3eSWo8v2JdyupjddNy6yx9djDa5BA==",
   "success": true,
-  "projectFilePath": "/Users/user/Taiwo/new/dotnet-react-ecommerce/API/API.csproj",
+  "projectFilePath": "/Users/user/Taiwo/dotnet/dotnet-react-ecommerce/API/API.csproj",
   "expectedPackageFiles": [
     "/Users/user/.nuget/packages/automapper/9.0.0/automapper.9.0.0.nupkg.sha512",
     "/Users/user/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/7.0.0/automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",

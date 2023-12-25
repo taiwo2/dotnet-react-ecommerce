@@ -3783,11 +3783,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/user/Taiwo/new/dotnet-react-ecommerce/API/API.csproj",
+      "projectUniqueName": "/Users/user/Taiwo/dotnet/dotnet-react-ecommerce/API/API.csproj",
       "projectName": "API",
-      "projectPath": "/Users/user/Taiwo/new/dotnet-react-ecommerce/API/API.csproj",
+      "projectPath": "/Users/user/Taiwo/dotnet/dotnet-react-ecommerce/API/API.csproj",
       "packagesPath": "/Users/user/.nuget/packages/",
-      "outputPath": "/Users/user/Taiwo/new/dotnet-react-ecommerce/API/obj/",
+      "outputPath": "/Users/user/Taiwo/dotnet/dotnet-react-ecommerce/API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/user/.nuget/NuGet/NuGet.Config"
