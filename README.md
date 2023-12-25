@@ -9,8 +9,6 @@
 <img class=mobile-image src="./images/home.png" /> | <img class=mobile-image src="./images/api.png" />
 
 
-
-
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
