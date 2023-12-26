@@ -8,7 +8,7 @@
 
 ## APIS <br/>
 <p align="center">
-<img class=mobile-image src="./images/api.png" width="45%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/apis.png" width="45.5%" />
+<img class=mobile-image src="./images/api.png" width="45%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/apis.png" width="47%" />
 </p>
 
 ## CART AND SINGLE PRODUCT <br/>
@@ -23,7 +23,7 @@
 
 ## SHIPPING AND INVENTORY<br/>
 <p align="center">
-<img class=mobile-image src="./images/paymentDetails.png" width="45%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/Inventory.png" width="45.5%" />
+<img class=mobile-image src="./images/paymentDetails.png" width="45%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/Inventory.png" width="45%" />
 </p>
 
 ## ORDERS AND VIEW ORDERS<br/>
