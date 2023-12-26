@@ -23,7 +23,7 @@
 
 ## SHIPPING AND INVENTORY<br/>
 <p align="center">
-<img class=mobile-image src="./images/paymentDetails.png" width="47%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/Inventory.png" width="45%" />
+<img class=mobile-image src="./images/paymentDetails.png" width="48%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/Inventory.png" width="45%" />
 </p>
 
 ## ORDERS AND VIEW ORDERS<br/>
