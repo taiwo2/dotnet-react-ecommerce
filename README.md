@@ -18,22 +18,22 @@
 
 ## SHIPPING<br/>
 <p align="center">
-<img class=mobile-image src="./images/shippingaddress.png" width="45%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/review.png" width="48%" />
+<img class=mobile-image src="./images/shippingaddress.png" width="45%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/review.png" width="46%" />
 </p>
 
 ## SHIPPING AND INVENTORY<br/>
 <p align="center">
-<img class=mobile-image src="./images/paymentDetails.png" width="45%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/Inventory.png" width="48%" />
+<img class=mobile-image src="./images/paymentDetails.png" width="45%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/Inventory.png" width="46%" />
 </p>
 
 ## ORDERS AND VIEW ORDERS<br/>
 <p align="center">
-<img class=mobile-image src="./images/orders.png" width="45%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/pending.png" width="48%" />
+<img class=mobile-image src="./images/orders.png" width="45%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/pending.png" width="45%" />
 </p>
 
 ## PRODUCT DETAILS AND ERRORS<br/>
 <p align="center">
-<img class=mobile-image src="./images/productDetail.png" width="46%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/Error.png" width="48%" />
+<img class=mobile-image src="./images/productDetail.png" width="45%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/Error.png" width="46%" />
 </p
 
 <!-- TABLE OF CONTENTS -->
