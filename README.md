@@ -16,9 +16,9 @@
 <img class=mobile-image src="./images/checkoutpage.png" width="45%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/productpage.png" width="45%" />
 </p>
 
-## CART AND SINGLE PRODUCT <br/>
+## SHIPPING<br/>
 <p align="center">
-<img class=mobile-image src="./images/checkoutpage.png" width="45%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/productpage.png" width="45%" />
+<img class=mobile-image src="./images/shippingaddress.png" width="45%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/review.png" width="45%" />
 </p>
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
