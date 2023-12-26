@@ -33,7 +33,7 @@
 
 ## PRODUCT DETAILS AND ERRORS<br/>
 <p align="center">
-<img class=mobile-image src="./images/productDetail.png" width="45%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/Error.png" width="46%" />
+<img class=mobile-image src="./images/productDetail.png" width="46%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/Error.png" width="46%" />
 </p
 
 <!-- TABLE OF CONTENTS -->
