@@ -23,7 +23,7 @@
 
 ## SHIPPING AND INVENTORY<br/>
 <p align="center">
-<img class=mobile-image src="./images/paymentDetails.png" width="45%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/inventory.png" width="45%" />
+<img class=mobile-image src="./images/paymentDetails.png" width="45%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/Inventory.png" width="45%" />
 </p>
 
 ## ORDERS AND VIEW ORDERS<br/>
@@ -33,7 +33,7 @@
 
 ## PRODUCT DETAILS AND ERRORS<br/>
 <p align="center">
-<img class=mobile-image src="./images/productDetail.png" width="45%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/Error.png" width="45%" />
+<img class=mobile-image src="./images/productDetail.png" width="45%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/Error.png" width="46%" />
 </p
 
 <!-- TABLE OF CONTENTS -->
