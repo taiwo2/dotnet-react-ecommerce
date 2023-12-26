@@ -18,12 +18,12 @@
 
 ## SHIPPING<br/>
 <p align="center">
-<img class=mobile-image src="./images/shippingaddress.png" width="45%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/review.png" width="45.5%" />
+<img class=mobile-image src="./images/shippingaddress.png" width="45%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/review.png" width="45%" />
 </p>
 
 ## SHIPPING AND INVENTORY<br/>
 <p align="center">
-<img class=mobile-image src="./images/paymentDetails.png" width="45%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/Inventory.png" width="45%" />
+<img class=mobile-image src="./images/paymentDetails.png" width="45.5%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/Inventory.png" width="45%" />
 </p>
 
 ## ORDERS AND VIEW ORDERS<br/>
