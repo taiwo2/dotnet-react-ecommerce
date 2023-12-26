@@ -13,7 +13,7 @@
 
 ## CART AND SINGLE PRODUCT <br/>
 <p align="center">
-<img class=mobile-image src="./images/checkoutpage.png" width="45.5%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/productpage.png" width="46%" />
+<img class=mobile-image src="./images/checkoutpage.png" width="45.5%" /> &nbsp; &nbsp; &nbsp; &nbsp; <img class=mobile-image src="./images/productpage.png" width="47%" />
 </p>
 
 ## SHIPPING<br/>
