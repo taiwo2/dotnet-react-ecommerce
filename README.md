@@ -1,6 +1,6 @@
 
   <h2 align="center">FULL STACK DOTNET-ECOMMERCE WITH STRIPE PAYMENT INTEGRATION</h2>
-  <p>A FUll-Stack react-redux single page responsive application, where a user can buy a product, add to a cart, update carts, search, and order for products with  Stripe payment for shipment. A user needs to sign up and login to use the App</p>
+  <p>A Full-Stack react-redux single page responsive application, where a user can buy a product, add to a cart, update carts, search, and order for products with  Stripe payment for shipment. A user needs to sign up and login to use the App</p>
 
 <p align="center">
 <img class=mobile-image src="./images/home.png" /> 
